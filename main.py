@@ -1,6 +1,5 @@
 #COMP 340 HW5
 #Amari Sisco
-
 import lexer
 
 srcCode = "(3*43) + 100 / 3"
