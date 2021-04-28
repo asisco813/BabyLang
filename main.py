@@ -1,9 +1,15 @@
-#COMP 340 HW5
-#Amari Sisco
+# COMP 340
+# Amari Sisco
 import lexer
+import parserr
+import evaluator
 
-srcCode = "(3*43) + 100 / 3"
-tokSeq = lexer.tokenize(srcCode)
-
-for i in tokSeq:
-    print(i.type, i.value)
+while True:
+    srcCode = input(">>> ")
+    if srcCode == "poopoo":
+        break
+    tokSeq = lexer.tokenize(srcCode)
+    rootNode = parserr.parse(tokSeq)
+    result = evaluator.evaluate(rootNode)
+    print("The Result is: ", result)
+print("Now it is tim to go poo poo")
